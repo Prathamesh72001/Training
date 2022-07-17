@@ -13,8 +13,8 @@ abstract class NoteDatabaseClass : RoomDatabase() {
 
         @Synchronized
         fun getInstance(context: Context): NoteDatabaseClass {
-            if (instance == null) {
-                instance = Room.databaseBuilder(context, NoteDatabaseClass::class.java, "mydb").build()
+            if(instance == null) {
+                instance = Room.databaseBuilder(context.applicationContext, NoteDatabaseClass::class.java, "mydb").build()
             }
 
             return instance!!

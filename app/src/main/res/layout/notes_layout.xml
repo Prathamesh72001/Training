@@ -9,17 +9,18 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/note"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:fontFamily="@font/baloo"
             android:text="Note"
             android:textColor="@color/black"
             android:textSize="15sp" />
+
 
     </RelativeLayout>
 

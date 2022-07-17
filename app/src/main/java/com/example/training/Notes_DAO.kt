@@ -9,12 +9,12 @@ interface Notes_DAO {
     @Insert
     fun insert(note:Notes)
 
+    @Query("Update Notes_Table set Notes_Col = :Note where id = :ID")
+    fun update(Note:String,ID:Int)
+
     @Delete
     fun delete(note:Notes)
 
-    @Update
-    fun update(note:Notes)
-
     @Query("Select * from Notes_Table")
-    fun showAllNotes():LiveData<List<Notes>>
+    fun getAllNotes():MutableList<Notes>
 }
